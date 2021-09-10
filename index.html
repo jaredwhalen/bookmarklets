@@ -1,17 +1,24 @@
+<h1>Close SVG Crowbar</h1>
+<hr/>
 <h3>The bookmarklet</h3>
 <p>
-  <a class="bookmarklet" href="javascript:javascript: (function () { var e = document.createElement('script'); e.setAttribute('src', 'https://nytimes.github.io/svg-crowbar/svg-crowbar.js'); e.setAttribute('class', 'svg-crowbar'); document.body.appendChild(e); })();">SVG Crowbar</a>&nbsp;
+  <a class="bookmarklet" href="javascript:javascript:(function()%7Blet%20nodes%20%3D%20document.querySelectorAll(%22.svg-crowbar%22)%3Bnodes.forEach(n%20%3D%3E%20n.remove())%7D)()">Close SVG Crowbar</a>&nbsp;
   <span>← Drag this to your bookmarks bar.</span>
 </p>
 
 <style>
-.bookmarklet {
-    padding: 3px 8px;
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 1em;
-    background: #666;
-    color: white;
-}
+  
+  body {
+    font-family: sans-serif;
+  }
+
+  .bookmarklet {
+      padding: 3px 8px;
+      font-size: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 1em;
+      background: #666;
+      color: white;
+  }
 </style>
