@@ -1,10 +1,21 @@
-<h1>Close SVG Crowbar</h1>
+<h1>Jared's bookmarklets</h1>
 <hr/>
-<h3>The bookmarklet</h3>
+<h3>Close SVG Crowbar</h3>
 <p>
   <a class="bookmarklet" href="javascript:javascript:(function()%7Blet%20nodes%20%3D%20document.querySelectorAll(%22.svg-crowbar%22)%3Bnodes.forEach(n%20%3D%3E%20n.remove())%7D)()">Close SVG Crowbar</a>&nbsp;
   <span>← Drag this to your bookmarks bar.</span>
 </p>
+
+<hr/>
+<h3>Hermes fallback</h3>
+<p>
+  <a class="bookmarklet" href="javascript:javascript:(function()%7Basync%20function%20copySomething(text)%20%7Btry%20%7Bconst%20toCopy%20%3D%20text%3Bawait%20navigator.clipboard.writeText(toCopy)%3B%7Dcatch%20(err)%20%7Bconsole.error('Failed%20to%20copy%3A%20'%2C%20err)%3B%7D%7Dnavigator.clipboard.readText().then(str%20%3D%3E%20%7Blet%20slug%20%3D%20str.replace('https%3A%2F%2Fgraphics.axios.com%2Fhermes%2F'%2C%20'').replace('%2Findex.html'%2C'')%3Blet%20fallback%20%3D%20%60https%3A%2F%2Fgraphics.axios.com%2Fhermes%2F%24%7Bslug%7D%2Ffallbacks%2F%24%7Bslug%7D-social.png%60%3BcopySomething(fallback)%3B%7D).catch(err%20%3D%3E%20%7Bconsole.error('Failed%20to%20read%20clipboard%20contents%3A%20'%2C%20err)%3B%7D)%7D)()">Hermes fallback</a>&nbsp;
+  <span>← Drag this to your bookmarks bar.</span>
+</p>
+
+
+
+
 
 <style>
   
