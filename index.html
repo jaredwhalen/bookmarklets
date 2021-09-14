@@ -14,6 +14,15 @@
 </p>
 
 
+<hr/>
+<h3>DW fallback</h3>
+<p>
+  <a class="bookmarklet" href="javascript:javascript:(function()%7Basync%20function%20copySomething(text)%20%7Btry%20%7Bconst%20toCopy%20%3D%20text%3Bawait%20navigator.clipboard.writeText(toCopy)%3B%7Dcatch%20(err)%20%7Bconsole.error('Failed%20to%20copy%3A%20'%2C%20err)%3B%7D%7Dnavigator.clipboard.readText().then(str%20%3D%3E%20%7Blet%20fallback%20%3D%20str.replace(%2F%5B0-9%5D%2B%5C%2F%24%2Fg%2C%20'social.png')%3BcopySomething(fallback)%3B%7D).catch(err%20%3D%3E%20%7Bconsole.error('Failed%20to%20read%20clipboard%20contents%3A%20'%2C%20err)%3B%7D)%7D)()">DW fallback</a>&nbsp;
+  <span>← Drag this to your bookmarks bar.</span>
+</p>
+
+
+
 
 
 
