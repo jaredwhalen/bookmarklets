@@ -1,5 +1,6 @@
 //Public S3 → Fallback
-async function copySomething(text) {
+(function() {
+  async function copySomething(text) {
     try {
         const toCopy = text;
         await navigator.clipboard.writeText(toCopy);
@@ -15,3 +16,4 @@ navigator.clipboard.readText().then(str => {
 }).catch(err => {
     console.error('Failed to read clipboard contents: ', err);
 })
+})()
